@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "28d4403c-bc42-40cb-a42a-824fb5e7b2a3",
+		"name": "quasar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "topsecret_expected",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"satellites\": [\n        {\n            \"name\": \"kenobi\",\n            \"distance\": 100.0,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"\",\n                \"mensaje\",\n                \"\"\n            ]\n        },\n        {\n            \"name\": \"skywalker\",\n            \"distance\": 115.5,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ]\n        },\n        {\n            \"name\": \"sato\",\n            \"distance\": 142.7,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"un\",\n                \"\",\n                \"\"\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.135.229.142:8080/topsecret",
+					"protocol": "http",
+					"host": [
+						"34",
+						"135",
+						"229",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "topsecret_error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"satellites\": [\n        {\n            \"name\": \"kenobi\",\n            \"distance\":0,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"\",\n                \"mensaje\",\n                \"\"\n            ]\n        },\n        {\n            \"name\": \"skywalker\",\n            \"distance\": 0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ]\n        },\n        {\n            \"name\": \"sato\",\n            \"distance\": 0,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"un\",\n                \"\",\n                \"\"\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.135.229.142:8080/topsecret",
+					"protocol": "http",
+					"host": [
+						"34",
+						"135",
+						"229",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "satellite_name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"distance\": 100.0,\n    \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.135.229.142:8080/topsecret_split/sato",
+					"protocol": "http",
+					"host": [
+						"34",
+						"135",
+						"229",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret_split",
+						"sato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_satellite_name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.135.229.142:8080/topsecret_split/sato",
+					"protocol": "http",
+					"host": [
+						"34",
+						"135",
+						"229",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret_split",
+						"sato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "error_satillite_name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.135.229.142:8080/topsecret_split/skywallker",
+					"protocol": "http",
+					"host": [
+						"34",
+						"135",
+						"229",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"topsecret_split",
+						"skywallker"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
