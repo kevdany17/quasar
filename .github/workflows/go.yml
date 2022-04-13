@@ -30,7 +30,7 @@ jobs:
         heroku_app_name: "mighty-dawn-75375"
         heroku_email: "kevhernandez@outlook.com"
         heroku_api_key: "4f097be3-eb81-4b43-a017-cd0bd50cf33f"
-        buildpack: ./main
+        buildpack: "./main"
 
     
 
