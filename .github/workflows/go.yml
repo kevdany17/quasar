@@ -22,20 +22,7 @@ jobs:
       run: go test ./test/services/ && go test ./test/repository/
         
     - name: Build
-      run: go build ./cmd/main.go
-    
-    - name: Create a .env file
-      uses: SpicyPizza/create-envfile@v1.3.0
-      with:
-        file_name: ".env"
-    
-    - name: Write File
-      uses: DamianReeves/write-file-action@v1.0
-      with:
-        path: ".env"
-        contents: "ENV=production \n SERVER_PORT=80"
-        write-mode: "overwride"
-        
+      run: go build ./cmd/main.go 
         
     - name: Heroku Deploy
       uses: AkhileshNS/heroku-deploy@v3.12.12
@@ -44,7 +31,6 @@ jobs:
         heroku_email: "kevhernandez@outlook.com"
         heroku_api_key: "4f097be3-eb81-4b43-a017-cd0bd50cf33f"
         buildpack: ./main
-        env_file: ".env"
 
     
 
