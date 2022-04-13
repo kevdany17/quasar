@@ -18,14 +18,18 @@ jobs:
       with:
         go-version: 1.18
         
-    - name: Heroku Build
-      uses: behe/heroku-build@v1
-      with:
-        app-name: "mighty-dawn-75375"
-        api-key: "4f097be3-eb81-4b43-a017-cd0bd50cf33f"
-
     - name: Build
       run: go build ./cmd/main.go
+        
+    - name: Heroku Deploy
+      uses: AkhileshNS/heroku-deploy@v3.12.12
+      with:
+        heroku_app_name: "mighty-dawn-75375"
+        heroku_email: "kevhernandez@outlook.com"
+        heroku_api_key: "4f097be3-eb81-4b43-a017-cd0bd50cf33f"
+        buildpack: ./main
+
+    
 
     - name: Test
       run: go test ./test/services/ && go test ./test/repository/
