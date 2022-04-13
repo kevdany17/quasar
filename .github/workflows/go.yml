@@ -22,7 +22,7 @@ jobs:
       run: go test ./test/services/ && go test ./test/repository/
         
     - name: Build
-      run: go build ./cmd/main.go
+      run: go build ./cmd/main.go 
         
     - name: Heroku Deploy
       uses: AkhileshNS/heroku-deploy@v3.12.12
