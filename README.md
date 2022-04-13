@@ -11,7 +11,7 @@ Challenge Technical
   - Linux or MAC OS
   ``` 
       export ENV=production
-      export SERVER_PORT=80 
+      export SERVER_PORT=8080 
    ```
 ## Enviroment on Development
   ### All Systems
