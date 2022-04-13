@@ -16,7 +16,7 @@ Challenge Technical
 ## Enviroment on Development
   ### All Systems
   - Create file .env
-  - Add var SERVER_PORT=300
+  - Add var SERVER_PORT=3000
 
 ## Run Test
   ``` go test ./test/services/ && go test ./test/repository/ ```
