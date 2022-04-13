@@ -18,6 +18,9 @@ jobs:
       with:
         go-version: 1.18
         
+    - name: Test
+      run: go test ./test/services/ && go test ./test/repository/
+        
     - name: Build
       run: go build ./cmd/main.go
         
@@ -31,5 +34,4 @@ jobs:
 
     
 
-    - name: Test
-      run: go test ./test/services/ && go test ./test/repository/
+    
