@@ -25,9 +25,17 @@ jobs:
       run: go build ./cmd/main.go
     
     - name: Create a .env file
-      uses: DeveloperRic/action-create-env@v1.0.4
+      uses: SpicyPizza/create-envfile@v1.3.0
       with:
-        full_text: "ENV=production \n SERVER_PORT=80"
+        file_name: ".env"
+    
+    - name: Write File
+      uses: DamianReeves/write-file-action@v1.0
+      with:
+        path: ".env"
+        contents: "ENV=production \n SERVER_PORT=80"
+        write-mode: "overwride"
+        
         
     - name: Heroku Deploy
       uses: AkhileshNS/heroku-deploy@v3.12.12
